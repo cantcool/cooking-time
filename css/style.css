@@ -1,0 +1,343 @@
+/* INIT STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+
+    font-size: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    font-size: 0;
+
+    background-color: #ffffff;
+}
+
+/* HEADER */
+
+.header-wrapper {
+    width: 100%;
+    height: 160px;
+
+    background-color: #f5b924;
+}
+
+header {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px 0;
+}
+
+.logo-wrapper {
+    display: inline-block;
+
+    text-align: right;
+}
+
+.logo {
+    float: right;
+    width: 240px;
+    height: 117px;
+    margin: 20px 0 20px 240px;
+
+    background: url('../img/cooking_time_logo.png') no-repeat;
+}
+
+h2 {
+    margin: 0 0 30px;
+    padding: 36px 0 20px;
+
+    font-weight: 400;
+    font-size: 86px;
+    line-height: 24px;
+    font-family: 'Concert One', 'Arial', sans-serif;
+}
+
+.header-head {
+    float: left;
+    margin-top: 23px;
+
+    color: #ee0e0b;
+}
+
+/* GAME CONTENT */
+
+.game-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #081f2f;
+}
+
+.game {
+    position: relative;
+
+    width: 1280px;
+    margin: 0 auto 0;
+    padding: 20px 0 5px;
+    overflow: visible;
+
+    font-size: 20px;
+    text-align: center;
+
+    background-image: url("../img/makin-bacon-pancakes-t-shirt-teeturtle-adventure-time_800x.jpg"), url("../img/nokeyboard.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 52px, 967px 34px;
+    background-size: 300px 300px, 400px 400px;
+}
+
+.game-frame {
+    overflow: hidden;
+
+    border: 0;
+    outline: 0;
+}
+
+.game-description {
+    margin: 0;
+    padding: 0 0 10px;
+    overflow: hidden;
+
+    font-size: 30px;
+    font-family: 'Concert One', 'Arial', sans-serif;
+    text-align: center;
+    color: #ffffff;
+
+    border: 0;
+    outline: 0;
+}
+
+/* BANNER */
+
+.banner-wrapper {
+    width: 100%;
+    margin: 0;
+
+    background-color: #6cc327;
+}
+
+.banner {
+    width: 1280px;
+    height: 493px;
+    margin: 0 auto;
+
+    font-family: 'Arial', sans-serif;
+}
+
+.banner-item {
+    padding: 20px;
+}
+
+.banner-message {
+    left: 98px;
+
+    width: 500px;
+}
+
+.banner-head {
+    color: #ffffff;
+}
+
+.banner-title {
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.banner-image {
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN CONTENT */
+
+.main-wrapper {
+    width: 100%;
+
+    background-color: #ffffff;
+}
+
+.main {
+    width: 1280px;
+    margin: 25px auto 0;
+
+    font-size: 0;
+}
+
+.main-head {
+    padding: 50px 20px 30px;
+
+    color: #081f2f;
+}
+
+.main-column {
+    display: inline-block;
+    width: 400px;
+    margin-right: 14px;
+    padding: 0;
+
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.main-column:last-child {
+    margin-right: 0;
+}
+
+/* ARTICLES */
+
+article {
+    width: 400px;
+    min-height: 170px;
+    margin: 0 10px 10px;
+    padding: 0 0 20px;
+
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+
+    border-radius: 15px;
+}
+
+article:hover {
+    box-shadow: 0 0 30px rgba(112, 112, 112, .5);
+
+    transition: all .3s ease-in-out;
+}
+
+article header {
+    width: 100%;
+    margin: 25px 0 10px;
+}
+
+.html5 {
+    margin: 30px 0 0 0;
+}
+
+.pixi {
+    width: 260px;
+    margin: 40px 0 10px 58px;
+}
+
+.bmo {
+    width: 160px;
+    margin: 40px 0 10px 0;
+}
+
+article img {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+}
+
+article h2 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+    font-family: 'Concert One', 'Arial', sans-serif;
+    color: #04869e;
+    text-transform: uppercase;
+}
+
+article p {
+    margin: 0;
+    padding: 0 25px 0 28px;
+
+    line-height: 28px;
+    letter-spacing: .1em;
+}
+
+blockquote {
+    margin: 0;
+    padding: 51px 28px 28px;
+
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.article-link {
+    padding: 60px 30px 58px;
+
+    font-size: 17px;
+    line-height: 28px;
+    letter-spacing: .09em;
+}
+
+.article-link a {
+    color: #ffffff;
+}
+
+.article-link a:hover,
+.article-link a:active {
+    color: #d5d5d5;
+}
+
+/* FOOTER */
+
+.footer-wrapper {
+    width: 100%;
+
+    background-color: #081f2f;
+}
+
+footer {
+    width: 1280px;
+    margin: 30px auto;
+    padding: 22px 20px 0;
+
+    font-size: 0;
+    color: #ffffff;
+}
+
+.footer-column {
+    display: inline-block;
+    width: 380px;
+    margin-right: 50px;
+
+    font-size: 16px;
+    line-height: 28px;
+    vertical-align: top;
+}
+
+.footer-column:last-child {
+    width: 300px;
+    margin-right: 0;
+    padding-left: 55px;
+}
+
+footer h3 {
+    margin: 10px 0 20px;
+
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Concert One', 'Arial', sans-serif;
+    color: #6cc327;
+    letter-spacing: 0.05em;
+}
+
+footer p {
+    margin: 6px 0 20px;
+}
+
+footer a {
+    color: #4dccf5;
+    text-decoration: none;
+}
+
+.copyleft {
+    padding-bottom: 20px;
+
+    font-size: 30px;
+    font-family: 'Concert One', 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+}
