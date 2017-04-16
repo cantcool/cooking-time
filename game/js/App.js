@@ -7,6 +7,7 @@ const gameWidth = 800;
 const gameHeight = 600;
 
 let app;
+let isDebug = false;
 
 let loaderView = document.getElementById('loader');
 let loaderText = document.getElementById('loaderText');
@@ -27,13 +28,11 @@ let hasLoaded = false;
 let soundMusic;
 let soundEvent;
 let soundStart;
-let soundGameOver;
+let soundResult;
 
-// let soundEventVolume = 0.0;
-// let soundMusicVolume = 0.0;
-
-let soundEventVolume = 0.6;
-let soundMusicVolume = 0.8;
+let soundEventVolume = isDebug ? 0.0 : 0.6;
+let soundMusicVolume = isDebug ? 0.0 : 0.8;
+let successScores = isDebug ? 30 : 500;
 
 let renderer = PIXI.autoDetectRenderer(gameWidth, gameHeight);
 let stage = new PIXI.Stage();
@@ -112,7 +111,7 @@ function init() {
         isAdding = true;
 
         if(!app.gamePlaying) {
-            $('.introScreen').fadeOut(300);
+            $('.levelIntro1').fadeOut(300);
             soundMusic.stop();
             soundMusic.play();
             soundMusic.fade(0, soundMusicVolume, 2500);
@@ -136,7 +135,7 @@ function init() {
     });
 
     firstRun = true;
-    $('.introScreen').delay(100).fadeIn(300);
+    $('.levelIntro1').delay(100).fadeIn(300);
 }
 
 function onTouchStart(event) {
@@ -147,7 +146,7 @@ function onTouchStart(event) {
 
     if(!app.gamePlaying) {
         if(firstRun) {
-            $('.introScreen').fadeOut(300);
+            $('.levelIntro1').fadeOut(300);
         }
         app.restart();
     }

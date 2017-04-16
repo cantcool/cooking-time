@@ -40,9 +40,14 @@ GAME.View = function(engine) {
     this.gameoverScreen.style.display = 'none';
     canvas.appendChild(this.gameoverScreen);
 
-    this.introScreen = document.createElement('div');
-    this.introScreen.className = 'introScreen';
-    canvas.appendChild(this.introScreen);
+    this.levelIntro1screen = document.createElement('div');
+    this.levelIntro1screen.className = 'levelIntro1';
+    canvas.appendChild(this.levelIntro1screen);
+
+    this.levelCompleteScreen = document.createElement('div');
+    this.levelCompleteScreen.className = 'levelComplete';
+    this.levelCompleteScreen.style.display = 'none';
+    canvas.appendChild(this.levelCompleteScreen);
 };
 
 GAME.View.constructor = GAME.View;
@@ -60,5 +65,15 @@ GAME.View.prototype.showGameover = function() {
 
 GAME.View.prototype.hideGameover = function() {
     $(this.gameoverScreen).fadeOut();
+    soundMusic.fade(0, soundMusicVolume, 1500);
+};
+
+GAME.View.prototype.showLevelComplete = function() {
+    $(this.levelCompleteScreen).fadeIn();
+    soundMusic.fade(soundMusicVolume, 0, 1000);
+};
+
+GAME.View.prototype.hideLevelComplete = function() {
+    $(this.levelCompleteScreen).fadeOut();
     soundMusic.fade(0, soundMusicVolume, 1500);
 };

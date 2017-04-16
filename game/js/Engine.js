@@ -48,14 +48,29 @@ GAME.Engine.prototype.gameover = function() {
 
     this.pickupManager.removeAll();
 
-    soundGameOver = new Howl({
+    soundResult = new Howl({
         src: 'sounds/gameover.mp3',
         autoplay: false,
         loop: false,
         volume: soundEventVolume
     });
-    setTimeout(function() {soundGameOver.play();}, 800);
-    
+    setTimeout(function() {soundResult.play();}, 800);
+};
+
+GAME.Engine.prototype.levelComplete = function() {
+    this.view.showLevelComplete();
+    this.canSpawn = this.gamePlaying = false;
+    this.player.visible = false;
+
+    this.pickupManager.removeAll();
+
+    soundResult = new Howl({
+        src: 'sounds/gosh.mp3',
+        autoplay: false,
+        loop: false,
+        volume: soundEventVolume
+    });
+    setTimeout(function() {soundResult.play();}, 800);
 };
 
 GAME.Engine.prototype.restart = function() {
@@ -65,4 +80,5 @@ GAME.Engine.prototype.restart = function() {
     this.score = 0;
     this.player.visible = true;
     this.view.hideGameover();
+    this.view.hideLevelComplete();
 };

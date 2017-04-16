@@ -55,7 +55,7 @@ GAME.PickupManager.prototype.update = function() {
 GAME.PickupManager.prototype.addPickup = function() {
     if(this.engine.canSpawn) {
         const item = this.pickupPool.getObject();
-        const dropType = Math2.randomInt(0, 10);
+        const dropType = Math2.randomInt(0, 11);
 
         this.engine.view.actionContainer.addChild(item);
         
@@ -91,6 +91,14 @@ GAME.PickupManager.prototype.addPickup = function() {
             case 10:
                 item.setTypeToGunter();
                 break;
+
+            case 11:
+                if(this.engine.lifesManager.lifesCount < 2) {
+                    item.setTypeToLife();
+                } else {
+                    item.setTypeToGunter();
+                }
+                break;
         }
 
         this.pickups.push(item);
@@ -112,7 +120,7 @@ GAME.PickupManager.prototype.pickup = function(item) {
 
         switch (item.id) {
             case GAME.Pickup.FLOUR:
-                item.handleGood(8);
+                item.handleGood(5);
                 break;
 
             case GAME.Pickup.EGGS:
@@ -120,11 +128,11 @@ GAME.PickupManager.prototype.pickup = function(item) {
                 break;
 
             case GAME.Pickup.MILK:
-                item.handleGood(3);
+                item.handleGood(2);
                 break;
 
             case GAME.Pickup.BACON:
-                item.handleGood(10);
+                item.handleGood(8);
                 break;
 
             case GAME.Pickup.MINT:
@@ -137,6 +145,10 @@ GAME.PickupManager.prototype.pickup = function(item) {
 
             case GAME.Pickup.TRUNK:
                 item.handleBad(3);
+                break;
+
+            case GAME.Pickup.LIFE:
+                item.handleLife();
                 break;
         }
     }
