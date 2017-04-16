@@ -1,0 +1,18 @@
+{"frames": {
+"bg01":
+{
+	"frame": {"x":0,"y":0,"w":946,"h":600},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":946,"h":600},
+	"sourceSize": {"w":946,"h":600}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "bg.jpg",
+	"format": "RGBA8888",
+	"size": {"w":600,"h":600},
+	"scale": "1"
+}
+}
